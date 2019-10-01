@@ -12,12 +12,14 @@ barra_a.speed(0)
 barra_a.shape("classic")
 barra_a.color("black")
 barra_a.penup()
+barra_a.goto(-350,0)
 
 barra_b = turtle.Turtle()
 barra_b.speed(0)
 barra_b.shape("classic")
 barra_b.color("black")
 barra_b.penup()
+barra_b.goto(350,0)
 #Bola
 
 bola = turtle.Turtle()
