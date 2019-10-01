@@ -28,10 +28,6 @@ bola.penup()
 bola.dx = 2
 bola.dy = -2
 
-
-
-
-
 # Funções
 
 def mover_cima_a():
@@ -63,17 +59,6 @@ def mover_baixo_b():
     barra_b.resizemode('user')
     barra_b.shapesize(5, 5, 12)
     barra_b.tilt(3000)
-
-
-'''def mover_esquerda():
-    x = barra_a.xcor()
-    x += 20
-    barra_a.setx(x)
-
-def mover_direita():
-    x = barra_a.xcor()
-    x -= 20
-    barra_a.setx(x)'''
 
 jogo.listen()
 jogo.onkeypress(mover_cima_a, "w")
