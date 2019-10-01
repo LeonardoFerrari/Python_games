@@ -9,16 +9,18 @@ jogo.tracer()
 # Barra
 barra_a = turtle.Turtle()
 barra_a.speed(0)
-barra_a.shape("classic")
+barra_a.shape("square")
 barra_a.color("black")
 barra_a.penup()
+barra_a.shapesize(7,1,1)
 barra_a.goto(-350,0)
 
 barra_b = turtle.Turtle()
 barra_b.speed(0)
-barra_b.shape("classic")
+barra_b.shape("square")
 barra_b.color("black")
 barra_b.penup()
+barra_b.shapesize(7,1,1)
 barra_b.goto(350,0)
 #Bola
 
@@ -27,8 +29,10 @@ bola.speed(0)
 bola.shape('square')
 bola.color("black")
 bola.penup()
-bola.dx = 2
-bola.dy = -2
+
+# Colocar opção para escolher velocidade da bola depois, 2/-2 default
+bola.dx = 2.5
+bola.dy = -2.5
 
 # Funções
 
@@ -36,30 +40,24 @@ def mover_cima_a():
     y = barra_a.ycor()
     y += 20
     barra_a.sety(y)
-    barra_a.shapesize(1.0, 1.0, 1)
     barra_a.tilt(-3000)
 
 def mover_baixo_a():
     y = barra_a.ycor()
     y -= 20
     barra_a.sety(y)
-    barra_a.resizemode('user')
-    barra_a.shapesize(5, 5, 12)
     barra_a.tilt(3000)
 
 def mover_cima_b():
     y = barra_b.ycor()
     y += 20
     barra_b.sety(y)
-    barra_b.shapesize(1.0, 1.0, 1)
     barra_b.tilt(-3000)
 
 def mover_baixo_b():
     y = barra_b.ycor()
     y -= 20
     barra_b.sety(y)
-    barra_b.resizemode('user')
-    barra_b.shapesize(5, 5, 12)
     barra_b.tilt(3000)
 
 jogo.listen()
